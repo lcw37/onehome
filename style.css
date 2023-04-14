@@ -1,0 +1,47 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+/* branding colors */
+:root {
+    --tan: #FBF4ED;
+    --blue: #5178FF;
+  }
+
+  
+/* enable new font family */
+@font-face {
+    font-family: "Agrandir";
+    src: url("./assets/Agrandir\ Regular\ 400.otf");
+}
+
+* {
+    font-family: "Agrandir" !important;
+}
+
+
+/* website-wide background/text coloring */
+.has-background-light {
+    background-color:var(--tan)!important
+}
+
+.has-background-dark {
+    background-color:var(--blue)!important
+}
+
+.has-text-dark {
+    color:var(--blue)!important
+}
+
+/* Login button styling */
+.button.is-primary {
+    background-color:var(--blue);
+    border-color:transparent;color:#fff
+}
+
+/* navbar styling */
+.navbar.has-shadow {
+    box-shadow:0 2px 0 0 #b4b2ab
+}
+
+#roundedButton {
+    border-radius: 50px
+}
