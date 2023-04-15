@@ -9,35 +9,34 @@
 </head>
 
 <body class="has-background-light has-text-centered p-0">
-    <div class="hero is-fullheight">
+    <div class="wrapper">
 
         <!-- left-side space for vertical navbar -->
-        <div>
+        <div class="navbar-wrapper">
             <div id="nav-placeholder">
             </div>
             <script>
-            $(function(){
-            $("#nav-placeholder").load("../components/navbar-side.html");
-            });
+                $(function(){
+                $("#nav-placeholder").load("../components/navbar-side.html");
+                });
             </script>
         </div>
-
-
-        <div class="columns">
-            
+        
+        <div class="main-wrapper">
             <!-- middle space for profile -->
-            <div class="column">
-                middle
+            <div class="main-left">
+                middle middle middle
             </div>
 
             <!-- right-side space for detailed form progress, can be hidden -->
-            <div class="column">
+            <div class="main-right">
                 right
             </div>
-
         </div>
 
+        
 
 
-    </div>
+
+    </div class="wrapper">
 </body>
