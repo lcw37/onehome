@@ -48,3 +48,10 @@
 #roundedButton {
     border-radius: 50px
 }
+
+.sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    border-color: #5178FF;
+}
