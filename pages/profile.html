@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body class="has-background-light has-text-centered p-0">
+    <div class="hero is-fullheight">
+
+        <!-- left-side space for vertical navbar -->
+        <div>
+            <div id="nav-placeholder">
+            </div>
+            <script>
+            $(function(){
+            $("#nav-placeholder").load("../components/navbar-side.html");
+            });
+            </script>
+        </div>
+
+
+        <div class="columns">
+            
+            <!-- middle space for profile -->
+            <div class="column">
+                middle
+            </div>
+
+            <!-- right-side space for detailed form progress, can be hidden -->
+            <div class="column">
+                right
+            </div>
+
+        </div>
+
+
+
+    </div>
+</body>
