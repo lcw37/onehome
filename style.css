@@ -16,6 +16,8 @@
 
 * {
     font-family: "Agrandir" !important;
+    /* border: 1px solid; */
+    /* ^ (un)comment the above line to see flexbox borders, useful for debugging */
 }
 
 
@@ -49,9 +51,48 @@
     border-radius: 50px
 }
 
+
+/* sidebar styling */
 .sidebar {
-    position: fixed;
+    height: 100vh;
     width: 200px;
-    height: 100%;
-    border-color: #5178FF;
+    box-shadow: 4px 0px 4px rgb(159, 158, 158);
+    border-right: 4px solid #5178FF;
+}
+
+.icon {
+    width:60px;
+    margin: 28px 0px;
+}
+
+.logo {
+    width: 90px;
+    margin :15px 0px;
+}
+
+
+/* individual profile page styling */
+.wrapper {
+    display: flex;
+}
+
+.navbar-wrapper {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.main-wrapper {
+    height: 100vh;
+    overflow: scroll;
+    align-items: stretch;
+    width: 100%;
+    flex-direction: row;
+}
+
+.main-left {
+    text-align: center;
+}
+
+.main-right {
+    text-align: center;
 }
