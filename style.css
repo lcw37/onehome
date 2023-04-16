@@ -118,3 +118,7 @@
     text-align: center;
     box-shadow: -4px 0px 4px rgb(159, 158, 158);
 }
+
+.profile-pic {
+    width: 200px;
+}
