@@ -60,14 +60,29 @@
     border-right: 4px solid #5178FF;
 }
 
-.icon {
-    width:60px;
-    margin: 28px 0px;
+.sidebar-icon {
+    width: 60px;
+    height: auto;
+    margin: 14px auto;
+    /* transition: 0.2s; */
 }
 
 .logo {
     width: 90px;
-    margin :15px 0px;
+    height: auto;
+    margin :20px auto;
+}
+
+.icon:hover {
+    box-shadow: 0 0 9px rgb(159, 158, 158);
+    border-radius: 80%;
+    border-width: 5px;
+}
+
+.logo:hover {
+    border-radius: 0%;
+    box-shadow: none;
+    filter: brightness(85%);
 }
 
 
