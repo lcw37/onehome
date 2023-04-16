@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="../components/progressBar.js"></script>
 </head>
 
 <body class="has-background-light has-text-centered p-0">
@@ -39,7 +40,12 @@
 
             <!-- right-side space for detailed form progress, can be hidden -->
             <div id="main-right" class="column">
-                <p>filler</p>
+                <progress-bar 
+                    donePct="50" 
+                    inProgressPct="25" 
+                    notStartedPct="25"
+                >
+                </progress-bar>
             </div>
         </div>
 
