@@ -22,16 +22,16 @@
             </script>
         </div>
 
-        <div class="columns main-wrapper">
+        <div class="columns main-wrapper m-0">
 
             <!-- middle space for profile -->
-            <div class="column main-left">
+            <div id="main-left" class="column p-0">
                 <img class="profile-pic" src="../assets/personIcon.png">
                 <p>Name Lastname</p>
                 <p>DOB: MM/DD/YYYY</p>
                 <p>01234576</p>
-                <div class="progress-bar hero has-background-dark" onclick="toggleRightPanel(this)">
-                    <div class="hero-body">
+                <div class="hero" onclick="toggleRightPanel(this)">
+                    <div class="progress-bar hero-body">
                         click to toggle right side panel
                     </div>
                 </div>
@@ -39,7 +39,7 @@
 
             <!-- right-side space for detailed form progress, can be hidden -->
             <div id="main-right" class="column">
-                
+                <p>filler</p>
             </div>
         </div>
 
@@ -49,6 +49,7 @@
 
     </div class="wrapper">
 
+    <!-- code -->
     <script>
         function toggleRightPanel(callingElement) {
             // toggle main-right visibility, change progress-bar colors
@@ -58,9 +59,17 @@
                 callingElement.classList.add("has-background-dark");
             } else {
                 rhs.style.display = "none";
+                // resetView();
                 callingElement.classList.remove("has-background-dark");
             }
+        }
 
+        function resetView() {
+            const allProgressBars = document.getElementsByClassName("progress-bar");
+            for (let i = 0; i < allProgressBars.length; i++) {
+                allProgressBars[i].classList.remove("has-background-dark");
+                allProgressBars[i].classList.add("has-background-light");
+            }
         }
     </script>
 
