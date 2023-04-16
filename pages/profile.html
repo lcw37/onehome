@@ -30,8 +30,10 @@
                 <p>Name Lastname</p>
                 <p>DOB: MM/DD/YYYY</p>
                 <p>01234576</p>
-                <div class="hero has-background-dark" onclick="toggleRightPanel()">
-                    click to toggle right side panel
+                <div class="progress-bar hero has-background-dark" onclick="toggleRightPanel(this)">
+                    <div class="hero-body">
+                        click to toggle right side panel
+                    </div>
                 </div>
             </div>
 
@@ -48,13 +50,17 @@
     </div class="wrapper">
 
     <script>
-        function toggleRightPanel() {
-          var x = document.getElementById("main-right");
-          if (x.style.display === "none") {
-            x.style.display = "block";
-          } else {
-            x.style.display = "none";
-          }
+        function toggleRightPanel(callingElement) {
+            // toggle main-right visibility, change progress-bar colors
+            var rhs = document.getElementById("main-right");
+            if (rhs.style.display === "none") {
+                rhs.style.display = "block";
+                callingElement.classList.add("has-background-dark");
+            } else {
+                rhs.style.display = "none";
+                callingElement.classList.remove("has-background-dark");
+            }
+
         }
     </script>
 
