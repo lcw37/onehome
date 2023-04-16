@@ -1,10 +1,13 @@
 class ProgressBar extends HTMLElement {
     connectedCallback() {
-        var donePct = this.attributes.donePct.value;
-        var inProgressPct = this.attributes.inProgressPct.value;
-        var notStartedPct = this.attributes.notStartedPct.value;
+        var donePct = Number(this.attributes.donePct.value);
+        var inProgressPct = Number(this.attributes.inProgressPct.value);
+        var notStartedPct = Number(this.attributes.notStartedPct.value);
 
-        this.innerHTML = `<h1>${donePct}<br>${inProgressPct}<br>${notStartedPct}</h1>`;
+        this.innerHTML =    `<div class="progress-bar">
+                                
+                                ${donePct}<br>${inProgressPct}<br>${notStartedPct}
+                            </div>`;
     }
 }
 
