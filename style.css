@@ -89,6 +89,11 @@
     filter: brightness(85%);
 }
 
+/* progress bar styling */
+.progress-bar {
+    
+}
+
 
 /* ========================================== */
 
@@ -96,11 +101,6 @@
 .wrapper {
     display: flex;
 }
-
-/* .navbar-wrapper {   I think this is not necessary if .wrapper is used in the parent??
-    display: flex;
-    box-sizing: border-box;
-} */
 
 .main-wrapper {
     height: 100vh;
@@ -110,12 +110,14 @@
     flex-direction: row;
 }
 
-.main-left {
+#main-left {
     text-align: center;
+    /* box-shadow: inset -4px 0px 4px rgb(159, 158, 158); */
 }
 
 #main-right {
     text-align: center;
+    display: none;
     box-shadow: -4px 0px 4px rgb(159, 158, 158);
 }
 
