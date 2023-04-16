@@ -2,16 +2,16 @@
     upload home button round icon for sidebar
 
 **REPO STRUCTURE:**
-    • */_references*:
+    * */_references*:
         - important files
         - Bulma v0.9.4 stylesheet
-    • */assets*:  
+    * */assets*:  
         - font and images
-    • */components*:
+    * */components*:
         - sidebar
         - navbar
-    • */pages*:
+    * */pages*:
         - */login.html*:    login page
         - */index.html*:    main overview of existing profiles
         - */profile.html*:  individual profile view
-    • */style.css*
+    * */style.css*
