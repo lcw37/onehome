@@ -76,10 +76,10 @@
     display: flex;
 }
 
-.navbar-wrapper {
+/* .navbar-wrapper {   I think this is not necessary if .wrapper is used in the parent??
     display: flex;
     box-sizing: border-box;
-}
+} */
 
 .main-wrapper {
     height: 100vh;
