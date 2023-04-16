@@ -1,12 +1,13 @@
 /* @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"; */
 @import "/_references/bulma.min.css";
 
+/* ========================================== */
+
 /* branding colors */
 :root {
     --tan: #FBF4ED;
     --blue: #5178FF;
   }
-
   
 /* enable new font family */
 @font-face {
@@ -20,6 +21,8 @@
     /* ^ (un)comment the above line to see flexbox borders, useful for debugging */
 }
 
+
+/* ========================================== */
 
 /* website-wide background/text coloring */
 .has-background-light {
@@ -41,6 +44,8 @@
     border-color:transparent;color:#fff
 }
 
+
+/* ========================================== */
 
 /* navbar styling */
 .navbar.has-shadow {
@@ -64,7 +69,6 @@
     width: 60px;
     height: auto;
     margin: 14px auto;
-    /* transition: 0.2s; */
 }
 
 .logo {
@@ -85,6 +89,8 @@
     filter: brightness(85%);
 }
 
+
+/* ========================================== */
 
 /* individual profile page styling */
 .wrapper {
@@ -110,4 +116,6 @@
 
 .main-right {
     text-align: center;
+    box-shadow: -4px 0px 4px rgb(159, 158, 158);
+    /* border-left: 4px solid #5178FF; */
 }
