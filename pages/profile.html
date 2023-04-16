@@ -21,22 +21,23 @@
                 });
             </script>
         </div>
-        
+
         <div class="columns main-wrapper">
+
             <!-- middle space for profile -->
             <div class="column main-left">
                 <img src="../assets/personIcon.png">
                 <p>Name Lastname</p>
                 <p>DOB: MM/DD/YYYY</p>
                 <p>01234576</p>
-                <div class="hero has-background-dark">
-                    test
+                <div class="hero has-background-dark" onclick="toggleRightPanel()">
+                    click to toggle right side panel
                 </div>
             </div>
 
             <!-- right-side space for detailed form progress, can be hidden -->
-            <div class="column main-right">
-                right
+            <div id="main-right" class="column">
+                
             </div>
         </div>
 
@@ -45,4 +46,16 @@
 
 
     </div class="wrapper">
+
+    <script>
+        function toggleRightPanel() {
+          var x = document.getElementById("main-right");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+    </script>
+
 </body>

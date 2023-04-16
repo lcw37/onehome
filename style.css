@@ -114,8 +114,7 @@
     text-align: center;
 }
 
-.main-right {
+#main-right {
     text-align: center;
     box-shadow: -4px 0px 4px rgb(159, 158, 158);
-    /* border-left: 4px solid #5178FF; */
 }
