@@ -19,10 +19,7 @@ class ProgressBar extends HTMLElement {
                                     ${notStartedPct}
                                 </div>
                             </div>`;
-        // this.getElementsByClassName("done-segment").style.width = "10px";
-        // this.getElementsByClassName("inProgress-segment").style.width = "15px";
-        // this.getElementsByClassName("notStarted-segment").style.width = "20px";
-    }
+    }    
 }
 
 customElements.define('progress-bar', ProgressBar);
