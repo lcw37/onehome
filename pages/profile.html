@@ -33,13 +33,29 @@
                 <p>DOB: MM/DD/YYYY</p>
                 <p>01234576</p>
 
-                <div class="hero" onclick="toggleRightPanel(this)">
-                    <div class="hero-body progress-bar-container">
+                <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
+                    <div class="hero-body">
                         <progress-bar 
-                            donePct=".50" 
-                            inProgressPct=".25" 
-                            notStartedPct=".25"
-                        >
+                            donePct="50" 
+                            inProgressPct="25" >
+                        </progress-bar>
+                    </div>
+                </div>
+
+                <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
+                    <div class="hero-body">
+                        <progress-bar 
+                            donePct="20" 
+                            inProgressPct="25" >
+                        </progress-bar>
+                    </div>
+                </div>
+                
+                <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
+                    <div class="hero-body">
+                        <progress-bar 
+                            donePct="65" 
+                            inProgressPct="25" >
                         </progress-bar>
                     </div>
                 </div>
@@ -58,7 +74,7 @@
 
     </div class="wrapper">
 
-    <!-- code -->
+    <!-- ===================================== CODE ===================================== -->
     <script>
 
         // first, wait until the DOM has fully loaded
