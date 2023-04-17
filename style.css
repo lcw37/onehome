@@ -1,7 +1,7 @@
 /* @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"; */
 @import "/_references/bulma.min.css";
 
-/* ========================================== */
+/* ===================== GENERAL ===================== */
 
 /* branding colors */
 :root {
@@ -22,8 +22,6 @@
 }
 
 
-/* ========================================== */
-
 /* website-wide background/text coloring */
 .has-background-light {
     background-color:var(--tan)!important
@@ -38,14 +36,7 @@
 }
 
 
-/* Login button styling */
-.button.is-primary {
-    background-color:var(--blue);
-    border-color:transparent;color:#fff
-}
-
-
-/* ========================================== */
+/* ===================== COMPONENTS ===================== */
 
 /* navbar styling */
 .navbar.has-shadow {
@@ -93,10 +84,31 @@
 /* progress bar styling */
 .progress-bar {
     height: 100px;
+    display: flex;
+    border-radius: 10% 10%;
 }
 
+.done-segment {
+    background-color: #5178FF;
+}
 
-/* ========================================== */
+.inProgress-segment {
+    background-color: #5178FF;
+    opacity: 50%;
+}
+
+.notStarted-segment {
+    background-color: white;
+}
+
+/* ===================== PAGES ===================== */
+
+/* Login styling */
+.button.is-primary {
+    background-color:var(--blue);
+    border-color:transparent;color:#fff
+}
+
 
 /* individual profile page styling */
 .wrapper {
