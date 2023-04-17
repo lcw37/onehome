@@ -84,6 +84,7 @@
 /* progress bar styling */
 .progress-bar-container:hover {
     opacity: 80%;
+    /* filter: brightness(85%); */
     box-shadow: 0 0 9px #5178FF;
 }
 
