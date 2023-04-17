@@ -34,11 +34,11 @@
                 <div class="hero" onclick="toggleRightPanel(this)">
                     <div class="progress-bar-container hero-body">
                         <progress-bar 
-                    donePct=".50" 
-                    inProgressPct=".25" 
-                    notStartedPct=".25"
-                >
-                </progress-bar>
+                            donePct=".50" 
+                            inProgressPct=".25" 
+                            notStartedPct=".25"
+                        >
+                        </progress-bar>
                     </div>
                 </div>
             </div>
@@ -57,26 +57,62 @@
 
     <!-- code -->
     <script>
-        function toggleRightPanel(callingElement) {
+
+        // first, wait until the DOM has fully loaded
+        if(document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', afterLoaded);
+        } else {
+            // run startup code after DOMContentLoaded event has already fired
+            afterLoaded();
+        }
+
+        // code to run after DOM is loaded
+        function afterLoaded() {
+            // explicitly set right panel display to "none" (otherwise it will be null)
+            hideRightPanel();
+        }
+
+
+        function toggleRightPanel(callingProgressBarHero) {
             // toggle main-right visibility, change progress-bar colors
             var rhs = document.getElementById("main-right");
             if (rhs.style.display === "none") {
-                rhs.style.display = "block";
-                callingElement.classList.add("has-background-dark");
-            } else {
-                rhs.style.display = "none";
-                // resetView();
-                callingElement.classList.remove("has-background-dark");
+                showRightPanel();
+                callingProgressBarHero.classList.add("has-background-dark");
+                invertProgressBarColors();
+            } else if (rhs.style.display === "block") {
+                hideRightPanel();
+                resetColors();
             }
         }
 
-        function resetView() {
-            const allProgressBars = document.getElementsByClassName("progress-bar");
+        function showRightPanel() {
+            document.getElementById("main-right").style.display = "block";
+        }
+
+        function hideRightPanel() {
+            document.getElementById("main-right").style.display = "none";
+        }
+
+        function resetColors() {
+            const allProgressBars = document.getElementsByClassName("hero");
             for (let i = 0; i < allProgressBars.length; i++) {
                 allProgressBars[i].classList.remove("has-background-dark");
-                allProgressBars[i].classList.add("has-background-light");
             }
         }
+
+        function invertProgressBarColors(callingProgressBarHero) {
+            var colors = ["background-color: white;",
+                          "background-color: #5178FF; opacity: 50%;", 
+                          "background-color: #5178FF;"];
+            callingProgressBarHero.getElementsByClassName("done-segment").style.display = none;
+
+            
+            for (var i=0; i<children.length; i++) {
+                children[i].style = colors[i];
+            }
+        }
+
     </script>
 
 </body>

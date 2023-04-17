@@ -9,13 +9,13 @@ class ProgressBar extends HTMLElement {
         var notStartedPct = 25; // 100 - donePct - inProgressPct
 
         this.innerHTML =    `<div class="progress-bar columns">
-                                <div class="progress-segment" style="background-color: #5178FF; width: ${donePct}%">
+                                <div class="progress-segment done-segment" style="width: ${donePct}%;">
                                     ${donePct}
                                 </div>
-                                <div class="progress-segment" style="background-color: #5178FF; opacity: 50%; width: ${inProgressPct}%">
+                                <div class="progress-segment inProgress-segment" style="width: ${inProgressPct}%;">
                                     ${inProgressPct}
                                 </div>
-                                <div class="progress-segment" style="background-color: white; width: ${notStartedPct}%">
+                                <div class="progress-segment notStarted-segment" style="width: ${notStartedPct}%;">
                                     ${notStartedPct}
                                 </div>
                             </div>`;
