@@ -32,20 +32,20 @@
                 <p>DOB: MM/DD/YYYY</p>
                 <p>01234576</p>
                 <div class="hero" onclick="toggleRightPanel(this)">
-                    <div class="progress-bar hero-body">
-                        click to toggle right side panel
+                    <div class="progress-bar-container hero-body">
+                        <progress-bar 
+                    donePct=".50" 
+                    inProgressPct=".25" 
+                    notStartedPct=".25"
+                >
+                </progress-bar>
                     </div>
                 </div>
             </div>
 
             <!-- right-side space for detailed form progress, can be hidden -->
             <div id="main-right" class="column">
-                <progress-bar 
-                    donePct=".50" 
-                    inProgressPct=".25" 
-                    notStartedPct=".25"
-                >
-                </progress-bar>
+                filler
             </div>
         </div>
 
