@@ -8,9 +8,9 @@
 - */assets*:  
     - font and images
 - */components*:
-    - sidebar
-    - navbar
-    - progressBar (form completion progress)
+    - sidebar.html
+    - navbar.html
+    - progressBar.js (form completion progress)
 - */pages*:
     - */login.html*:    login page
     - */index.html*:    main overview of existing profiles
