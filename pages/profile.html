@@ -76,9 +76,9 @@
 
     </div class="wrapper">
 
-    <!-- ===================================== CODE ===================================== -->
-    <script>
 
+    
+    <script>
         // first, wait until the DOM has fully loaded
         if(document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', afterLoaded);
@@ -87,62 +87,11 @@
             afterLoaded();
         }
 
-        // code to run after DOM is loaded
+        // code to be run after DOM is loaded
         function afterLoaded() {
             // explicitly set right panel display to "none" (otherwise it will be null)
             hideRightPanel();
         }
-
-
-        function toggleRightPanel(callingProgressBarHero) {
-            // toggle main-right visibility, change progress-bar colors
-            var rhs = document.getElementById("main-right");
-            var progressBar = callingProgressBarHero.querySelector("progress-bar").children[0];
-            
-            // reset all coloring
-            uninvertAll();
-
-            // style accordingly
-            if (rhs.style.display === "none") {
-                showRightPanel();
-                callingProgressBarHero.classList.add("has-background-dark");
-                invertColors(progressBar);
-            } else if (rhs.style.display === "block") {
-                hideRightPanel();
-            }
-        }
-
-            function showRightPanel() {
-                document.getElementById("main-right").style.display = "block";
-            }
-
-            function hideRightPanel() {
-                document.getElementById("main-right").style.display = "none";
-            }
-
-            function invertColors(progressBar) {
-                var progressBarSegments = progressBar.children;
-                progressBarSegments[0].style.backgroundColor = "white";
-                progressBarSegments[2].style.backgroundColor = "#5178FF";
-                progressBar.style.borderColor = "white";
-            }
-
-            function uninvertColors(progressBar) {
-                var progressBarSegments = progressBar.children;
-                progressBarSegments[2].style.backgroundColor = "white";
-                progressBarSegments[0].style.backgroundColor = "#5178FF";
-                progressBar.style.borderColor = "#5178FF";
-            }
-
-            function uninvertAll() {
-                const allProgressBars = document.getElementsByClassName("progress-bar-container");
-                for (let i = 0; i < allProgressBars.length; i++) {
-                    var progressBar = allProgressBars[i].querySelector("progress-bar").children[0];
-                    uninvertColors(progressBar);
-                    allProgressBars[i].classList.remove("has-background-dark");
-                }
-            }
-
     </script>
 
 </body>
