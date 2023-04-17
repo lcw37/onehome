@@ -33,30 +33,32 @@
                 <p>DOB: MM/DD/YYYY</p>
                 <p>01234576</p>
 
-                <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
-                    <div class="hero-body">
-                        <progress-bar 
-                            donePct="50" 
-                            inProgressPct="25" >
-                        </progress-bar>
+                <div class="bars">
+                    <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
+                        <div class="hero-body">
+                            <progress-bar 
+                                donePct="50" 
+                                inProgressPct="25" >
+                            </progress-bar>
+                        </div>
                     </div>
-                </div>
 
-                <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
-                    <div class="hero-body">
-                        <progress-bar 
-                            donePct="20" 
-                            inProgressPct="25" >
-                        </progress-bar>
+                    <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
+                        <div class="hero-body">
+                            <progress-bar 
+                                donePct="20" 
+                                inProgressPct="25" >
+                            </progress-bar>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
-                    <div class="hero-body">
-                        <progress-bar 
-                            donePct="65" 
-                            inProgressPct="25" >
-                        </progress-bar>
+                    
+                    <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
+                        <div class="hero-body">
+                            <progress-bar 
+                                donePct="65" 
+                                inProgressPct="25" >
+                            </progress-bar>
+                        </div>
                     </div>
                 </div>
 
@@ -95,50 +97,51 @@
         function toggleRightPanel(callingProgressBarHero) {
             // toggle main-right visibility, change progress-bar colors
             var rhs = document.getElementById("main-right");
+            var progressBar = callingProgressBarHero.querySelector("progress-bar").children[0];
+            
+            // reset all coloring
+            uninvertAll();
+
+            // style accordingly
             if (rhs.style.display === "none") {
                 showRightPanel();
                 callingProgressBarHero.classList.add("has-background-dark");
+                invertColors(progressBar);
             } else if (rhs.style.display === "block") {
                 hideRightPanel();
-                resetColors();
-            }
-            invertProgressBarColors(callingProgressBarHero);
-        }
-
-        function showRightPanel() {
-            document.getElementById("main-right").style.display = "block";
-        }
-
-        function hideRightPanel() {
-            document.getElementById("main-right").style.display = "none";
-        }
-
-        function resetColors() {
-            const allProgressBars = document.getElementsByClassName("hero");
-            for (let i = 0; i < allProgressBars.length; i++) {
-                allProgressBars[i].classList.remove("has-background-dark");
             }
         }
 
-        function invertProgressBarColors(callingProgressBarHero) {
-            const colors = ["background-color: white;",
-                            "background-color: #a8b4f4;", 
-                            "background-color: #5178FF;"];
+            function showRightPanel() {
+                document.getElementById("main-right").style.display = "block";
+            }
 
-            var progressBar = callingProgressBarHero.querySelector("progress-bar").children[0];
-            var progressBarSegments = progressBar.children;
+            function hideRightPanel() {
+                document.getElementById("main-right").style.display = "none";
+            }
 
-            var rhs = document.getElementById("main-right");
-            if (rhs.style.display === "block") {
+            function invertColors(progressBar) {
+                var progressBarSegments = progressBar.children;
                 progressBarSegments[0].style.backgroundColor = "white";
                 progressBarSegments[2].style.backgroundColor = "#5178FF";
                 progressBar.style.borderColor = "white";
-            } else if (rhs.style.display === "none") {
+            }
+
+            function uninvertColors(progressBar) {
+                var progressBarSegments = progressBar.children;
                 progressBarSegments[2].style.backgroundColor = "white";
                 progressBarSegments[0].style.backgroundColor = "#5178FF";
                 progressBar.style.borderColor = "#5178FF";
             }
-        }
+
+            function uninvertAll() {
+                const allProgressBars = document.getElementsByClassName("progress-bar-container");
+                for (let i = 0; i < allProgressBars.length; i++) {
+                    var progressBar = allProgressBars[i].querySelector("progress-bar").children[0];
+                    uninvertColors(progressBar);
+                    allProgressBars[i].classList.remove("has-background-dark");
+                }
+            }
 
     </script>
 
