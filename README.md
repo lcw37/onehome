@@ -10,6 +10,7 @@
 - */components*:
     - sidebar
     - navbar
+    - progressBar (form completion progress)
 - */pages*:
     - */login.html*:    login page
     - */index.html*:    main overview of existing profiles
