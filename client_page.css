@@ -1,3 +1,4 @@
+@import "/_references/bootstrap.min.css";
 @import "style.css";
 
 .form-button {
@@ -21,3 +22,8 @@
         background-color: var(--blue);
         color: white;
     }
+
+.form-button-container {
+    display: flex;
+    flex-direction: column;;
+}

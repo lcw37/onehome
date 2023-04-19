@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="../client_page.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="../components/progressBar.js"></script>
+</head>
+
+<body class="has-background-light has-text-centered">
+    <div class="wrapper">
+
+        <!-- left-side space for vertical navbar -->
+        <div>
+            <div id="nav-placeholder">
+            </div>
+            <script>
+                $(function(){
+                $("#nav-placeholder").load("../components/sidebar.html");
+                });
+            </script>
+        </div>
+
+        <div class="columns main-wrapper m-0 p-0">
+
+            <!-- middle space for profile -->
+            <div id="main-left" class="column m-0 p-0">
+                <div class="">
+                    <!-- <img src="/media/{{entry.image}}" class="rounded-circle account-img" /> -->
+                    <img 
+                        class="rounded-circle account-img profile-pic"
+                        src="../media/client_pics/red-tailed-hawk.png" 
+                        onerror="this.onerror=null; this.src='../assets/personIcon.png'"
+                    >
+                    <div class="media-body">
+                        <h2 class="account-heading">
+                            <!-- {{ entry.first_Name }} -->
+                            first_name
+                        </h2>
+                        <p class="text-secondary">
+                            <!-- {{ entry.client_Intake_Date}} -->
+                            client_Intake_Date
+                        </p>
+                    </div>
+                </div>
+
+                <div class="content-section form-button-container">
+                    <!-- {% for entry in client_entry %} -->
+        
+                    <!-- {% buttons %} -->
+                    <a href="{% url 'addform' slug=entry.slug %}">
+                        <button class="form-button">
+                            <!-- {% bootstrap_icon "plus" %}  -->
+                            + ADD FORM
+                        </button>
+                    </a>
+                    <!-- {% endbuttons %}
+        
+                    {% buttons %} -->
+                    <a href="{% url 'deleteform' slug=entry.slug %}">
+                        <button class="form-button">
+                            <!-- {% bootstrap_icon "minus" %}  -->
+                            - DELETE FORM
+                        </button>
+                    </a>
+                    <!-- {% endbuttons %} -->
+
+                    <a class="" href="{% url 'upload_document' slug=entry.slug %}">
+                        <button class="form-button">
+                            UPLOAD DOCUMENT
+                        </button>
+                    </a>
+        
+                    <form method="POST">
+                        <!-- {% csrf_token %}
+                        {{ form }} -->
+                    </form>
+                    
+                </div>
+
+                <div class="bars">
+                    <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
+                        <div class="hero-body">
+                            <div class="media">
+                                <a class="nav-item nav-link"href="{% url 'application_home' slug1=entry.slug slug2=app.slug%}">
+                                    <!-- {{app.application_Name}} -->
+                                    application_Name
+                                </a>
+                                <!-- {% endfor %}
+                                {% endfor %} -->
+                            </div>
+                            <progress-bar 
+                                donePct="50" 
+                                inProgressPct="25" >
+                            </progress-bar>
+                        </div>
+                    </div>
+
+                    <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
+                        <div class="hero-body">
+                            <div class="media">
+                                <a class="nav-item nav-link"href="{% url 'application_home' slug1=entry.slug slug2=app.slug%}">
+                                    <!-- {{app.application_Name}} -->
+                                    application_Name
+                                </a>
+                                <!-- {% endfor %}
+                                {% endfor %} -->
+                            </div>
+                            <progress-bar 
+                                donePct="20" 
+                                inProgressPct="25" >
+                            </progress-bar>
+                        </div>
+                    </div>
+                    
+                    <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
+                        <div class="hero-body">
+                            <div class="media">
+                                <a class="nav-item nav-link"href="{% url 'application_home' slug1=entry.slug slug2=app.slug%}">
+                                    <!-- {{app.application_Name}} -->
+                                    application_Name
+                                </a>
+                                <!-- {% endfor %}
+                                {% endfor %} -->
+                            </div>
+                            <progress-bar 
+                                donePct="65" 
+                                inProgressPct="25" >
+                            </progress-bar>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- right-side space for detailed form progress; can be hidden -->
+            <div id="main-right" class="column">
+                <h1>Form Progress</h1>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        // first, wait until the DOM has fully loaded
+        if(document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', afterLoaded);
+        } else {
+            // run startup code after DOMContentLoaded event has already fired
+            afterLoaded();
+        }
+
+        // code to be run after DOM is loaded
+        function afterLoaded() {
+            // explicitly set right panel display to "none" (otherwise it will be null)
+            hideRightPanel();
+        }
+    </script>
+
+</body>
