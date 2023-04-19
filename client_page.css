@@ -1,0 +1,19 @@
+@import "style.css";
+
+.form-button {
+    background-color: white;
+    padding: 9px 15px;
+    padding-top: 12px; /* couldn't figure out why not aligning middle, so I hardcoded it */
+    width: 180px;
+    font-size: large;
+    font-weight: bold;
+    text-align: bottom;
+    color: var(--blue);
+    border: 3px solid var(--blue);
+    border-radius: 50px;
+}
+
+   .form-button:hover {
+        background-color: var(--blue);
+        color: white;
+    }
