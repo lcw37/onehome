@@ -5,7 +5,7 @@ General:
 
 Form styling:
 1. -DONE- import Bootstrap CSS to frontend repo (not sure where to find this)
-2. styling for form: *onehome/users/templates/users/client_page.html*
+2. -ROUGH DRAFT DONE- styling for form: *onehome/users/templates/users/client_page.html*
 3. use existing login page styling to style Nakia's login page
 
 **REPO STRUCTURE:**
