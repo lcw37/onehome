@@ -4,10 +4,14 @@
     background-color: white;
     padding: 9px 15px;
     padding-top: 12px; /* couldn't figure out why not aligning middle, so I hardcoded it */
-    width: 180px;
+    margin: 20px;
+    height: 55px;
+    min-width: 180px;
+    max-width: 250px;
     font-size: large;
     font-weight: bold;
-    text-align: bottom;
+    /* ver-align: middle; */
+    text-align: center;
     color: var(--blue);
     border: 3px solid var(--blue);
     border-radius: 50px;

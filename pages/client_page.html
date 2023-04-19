@@ -3,7 +3,7 @@
 
 <head>
     <title>Client Page</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../client_page.css">
     <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
@@ -15,18 +15,18 @@
 
         <!-- {% buttons %} -->
         <a href="{% url 'addform' slug=entry.slug %}">
-            <button>
+            <button class="form-button">
                 <!-- {% bootstrap_icon "plus" %}  -->
-                + Add Form
+                + ADD FORM
             </button>
         </a>
         <!-- {% endbuttons %}
 
         {% buttons %} -->
         <a href="{% url 'deleteform' slug=entry.slug %}">
-            <button>
+            <button class="form-button">
                 <!-- {% bootstrap_icon "minus" %}  -->
-                - Delete Form
+                - DELETE FORM
             </button>
         </a>
         <!-- {% endbuttons %} -->
@@ -36,8 +36,8 @@
             {{ form }} -->
         </form>
         
-        <a class="nav-item nav-link" href="{% url 'upload_document' slug=entry.slug %}">
-            Upload Document
+        <a class="nav-item nav-link form-button" href="{% url 'upload_document' slug=entry.slug %}">
+            UPLOAD DOCUMENT
         </a>
 
         <div class="media">
@@ -62,7 +62,6 @@
             <!-- {% endfor %}
             {% endfor %} -->
         </div>
-  
   
   
   </body>
