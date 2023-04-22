@@ -13,6 +13,16 @@ class ProgressBar extends HTMLElement {
                                 <div class="notStarted-segment progress-segment" style="width: ${notStartedPct}%;">
                                 </div>
                             </div>`;
+
+        var progressBar = this.querySelector(".progress-bar");
+        // if no done portion, round left-side corners of inProgress-segment
+        if (donePct === 0) {
+            progressBar.querySelector(".inProgress-segment").style.cssText += "border-top-left-radius: 10px; border-bottom-left-radius: 10px;";
+        }
+        // if no done or in-progress portion, round left-side corners of notStarted-segment
+        if (notStartedPct === 100) {
+            progressBar.querySelector(".notStarted-segment").style.cssText += "border-top-left-radius: 10px; border-bottom-left-radius: 10px;";
+        }
     }    
 }
 customElements.define('progress-bar', ProgressBar);
