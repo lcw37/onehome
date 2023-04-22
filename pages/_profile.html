@@ -31,17 +31,17 @@
                     <!-- <img src="/media/{{entry.image}}" class="rounded-circle account-img" /> -->
                     <img 
                         class="rounded-circle account-img profile-pic"
-                        src="../media/client_pics/red-tailed-hawk.png" 
+                        src="../media/client_pics/notARealImage.png" 
                         onerror="this.onerror=null; this.src='../assets/personIcon.png'"
                     >
                     <div class="media-body">
                         <h2 class="account-heading">
                             <!-- {{ entry.first_Name }} -->
-                            first_name
+                            Firstname Lastname
                         </h2>
                         <p class="text-secondary">
                             <!-- {{ entry.client_Intake_Date}} -->
-                            client_Intake_Date
+                            Intake Date: 01/01/2023
                         </p>
                     </div>
                 </div>
@@ -128,6 +128,23 @@
                             <progress-bar 
                                 donePct="65" 
                                 inProgressPct="25" >
+                            </progress-bar>
+                        </div>
+                    </div>
+
+                    <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
+                        <div class="hero-body">
+                            <div class="media">
+                                <a class="nav-item nav-link"href="{% url 'application_home' slug1=entry.slug slug2=app.slug%}">
+                                    <!-- {{app.application_Name}} -->
+                                    application_Name
+                                </a>
+                                <!-- {% endfor %}
+                                {% endfor %} -->
+                            </div>
+                            <progress-bar 
+                                donePct="0" 
+                                inProgressPct="10" >
                             </progress-bar>
                         </div>
                     </div>

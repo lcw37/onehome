@@ -171,5 +171,7 @@ html, body {
         }
 
 .profile-pic {
-    width: 200px;
+    width: 250px;
+    margin: 30px;
+    border: 8px var(--blue) solid;;
 }

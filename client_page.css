@@ -4,12 +4,11 @@
 .form-button {
     background-color: white;
     padding: 9px 15px;
-    padding-top: 12px; /* couldn't figure out why not aligning middle, so I hardcoded it */
-    margin: 20px;
-    height: 55px;
-    min-width: 180px;
+    margin: 15px;
+    height: 40px;
+    min-width: 160px;
     max-width: 250px;
-    font-size: large;
+    font-size:small;
     font-weight: bold;
     /* ver-align: middle; */
     text-align: center;
@@ -25,5 +24,6 @@
 
 .form-button-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
 }
