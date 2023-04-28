@@ -21,4 +21,9 @@
     bottom: 0; 
     right: 0; 
     background-color: var(--tan);
+    display: flex;
+}
+
+.nav-burger {
+    padding: 10px
 }
