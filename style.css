@@ -66,6 +66,8 @@ html, body {
     box-shadow: 4px 0px 10px rgb(159, 158, 158);
     border-right: 4px solid #5178FF;
     float: left;
+    z-index: 10;
+    position: fixed;
 }
 
     .sidebar-icon {
@@ -137,36 +139,33 @@ html, body {
 
 
 /* individual profile page styling */
-.wrapper {
-    display: flex;
+.main-wrapper {
+    height: 100vh;
+    width: calc(100% - 200px);
+    float: right;
+    overflow: scroll;
+    right: 0;
+    /* align-items: stretch; */
+    /* width: 100%; */
+    /* flex-direction: row; */
 }
 
-    .main-wrapper {
-        height: 100vh;
-        width: 90vw;
-        float: right;
-        overflow: scroll;
-        align-items: stretch;
-        width: 100%;
-        flex-direction: row;
+    #main-left {
+        text-align: center;
+        width: 50%;
+        /* float: left; */
+        overflow: auto;
+        /* box-shadow: inset -4px 0px 4px rgb(159, 158, 158); */
     }
 
-        #main-left {
-            text-align: center;
-            width: 50%;
-            /* float: left; */
-            overflow: auto;
-            /* box-shadow: inset -4px 0px 4px rgb(159, 158, 158); */
-        }
-
-        #main-right {
-            text-align: center;
-            display: none;
-            width: 50%;
-            /* float: left; */
-            overflow: auto;
-            box-shadow: -0px 0px 10px 0px rgb(159, 158, 158);
-        }
+    #main-right {
+        text-align: center;
+        display: none;
+        width: 50%;
+        /* float: left; */
+        overflow: auto;
+        box-shadow: -0px 0px 10px 0px rgb(159, 158, 158);
+    }
 
 .profile-pic {
     width: 250px;

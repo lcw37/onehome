@@ -1,0 +1,95 @@
+<!-- {% extends "hello/base.html" %} {% load crispy_forms_tags %} {% block content %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %} -->
+<!-- <a class="nav-item nav-link" href="{% url 'client_page' slug=slug1 %}">Client Page</a>
+<div class="content-section">
+<form method="POST" enctype="multipart/form-data"> -->
+    <!-- {% csrf_token %} -->
+    <!-- <fieldset class="form-group">
+    <legend class="border-bottom mb-4">application_Name</legend> -->
+    <!-- {% for field in form %}
+    {% bootstrap_field field form_group_class='col-md-6 form-group label-floating' %}
+    {% endfor %} -->
+
+    <!-- </fieldset>
+    <div class="form-group">
+    <button class="btn btn-outline-info" type="submit">Save</button>
+    </div>
+</form> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application</title>
+    <link rel="stylesheet" href="../application_home_style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body class="has-background-light has-text-centered">
+    <div class="wrapper">
+
+        <!-- left-side space for vertical navbar -->
+        <div>
+            <div id="nav-placeholder">
+            </div>
+            <script>
+                $(function(){
+                $("#nav-placeholder").load("../components/sidebar.html");
+                });
+            </script>
+        </div>
+
+        <div class="main-wrapper">
+
+            <div class="hero">
+                <div class="hero-body">
+                    <!-- dropdown menu -->
+                    <div class="navbar-menu">
+                        <div class="navbar-start">
+                            <div class="navbar-item has-dropdown is-hoverable">
+                                <a class="navbar-link">Menu</a>
+                                <div class="navbar-dropdown">
+                                    <a class="navbar-item">Section 1</a>
+                                    <a class="navbar-item">Section 2</a>
+                                    <a class="navbar-item">Section 3</a>
+                                    <a class="navbar-item">Section 4</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    2010e Supportive Housing Application
+                </div>
+            </div>
+
+            <div class="section-divider">
+                PERSONAL INFORMATION
+            </div>
+
+            <div class="section-content">
+                add input fields here
+            </div>
+
+            <div class="section-divider">
+                PSYCHOLOGICAL EVALUATION
+            </div>
+
+            <div class="section-content">
+                add input fields here
+            </div>
+
+        </div>
+
+        <div class="bottombar">
+            footer
+        </div>
+
+    </div>
+    
+</body>
+</html>
+
+
+
+  <!-- {% endblock content %} -->
