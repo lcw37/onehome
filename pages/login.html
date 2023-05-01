@@ -13,7 +13,7 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
  
-  <body class="has-background-light has-text-centered p-6">
+  <body class="has-background-light has-text-centered p-6" style="display:none;">
 
     <section class="hero is-fullheight">
         <div class="hero-body has-text-centered is-justify-content-center">
@@ -58,6 +58,13 @@
         </div>
       </section>
    
+      <script>
+        // add slight delay to reduce flickering
+        $(document).ready(function () {
+        $("body").removeClass("none").hide().fadeIn(75);
+        });
+    </script>
+
   </body>
 
 </html>
