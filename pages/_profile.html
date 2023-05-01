@@ -154,12 +154,10 @@
 
             <!-- right-side space for detailed form progress; can be hidden -->
             <div id="main-right" class="column">
-                <h1>Form Progress</h1>
+                <a href="./application_home.html">Go to 2010e Application</a>
             </div>
         </div>
     </div>
-
-
 
     <script>
         // first, wait until the DOM has fully loaded
@@ -176,5 +174,13 @@
             hideRightPanel();
         }
     </script>
+
+    <script>
+        // add slight delay to reduce flickering
+        $(document).ready(function () {
+        $("body").removeClass("none").hide().fadeIn(75);
+        });
+    </script>
+
 
 </body>

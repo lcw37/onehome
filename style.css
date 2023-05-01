@@ -13,6 +13,12 @@
 
 html, body {
     height: 100%; 
+    background-color: var(--tan);
+}
+
+body {
+    /* default none, to be removed upon page loading to reduce flickering */
+    display: none;
 }
 
 /* enable new font family */

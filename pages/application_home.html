@@ -56,8 +56,8 @@
                                 </a>
 
                                 <div class="navbar-dropdown">
-                                    <a class="navbar-item">Personal Information</a>
-                                    <a class="navbar-item">Psychological Evaluation</a>
+                                    <a class="navbar-item" href="#sec1">Personal Information</a>
+                                    <a class="navbar-item" href="#sec2">Psychological Evaluation</a>
                                 </div>
                                 
                             </div>
@@ -73,7 +73,7 @@
 
             <!-- SECTION 1 -->
 
-            <div class="section-divider">
+            <div class="section-divider" id="sec1">
                 PERSONAL INFORMATION
             </div>
 
@@ -156,7 +156,7 @@
 
             <!-- SECTION 2 -->
 
-            <div class="section-divider">
+            <div class="section-divider" id="sec2">
                 PSYCHOLOGICAL EVALUATION
             </div>
 
@@ -213,6 +213,13 @@
 
     </div>
     
+    <script>
+        // add slight delay to reduce flickering
+        $(document).ready(function () {
+        $("body").removeClass("none").hide().fadeIn(75);
+        });
+    </script>
+
 </body>
 </html>
 
