@@ -67,18 +67,45 @@ textarea {
     width: 100%;
 }
 
-
 .bottombar {
-    width: calc(100% - 200px);
     height: 100px;
-    box-shadow: 4px 0px 10px rgb(159, 158, 158);
+    width: calc(100% - 200px);
     float: right;
+    box-shadow: 4px 0px 10px rgb(159, 158, 158);
     position: fixed;
     z-index: 1;
     bottom: 0; 
     right: 0; 
     background-color: var(--tan);
     display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.bottombar-left {
+    display: flex; 
+    width: 50%; 
+    height: 100%;
+    align-items: center;
+}
+
+.bottombar-right {
+    display: flex;
+    width: 50%; 
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.bottombar-right * {
+    text-align: right;
+    color: var(--blue);
+    font-weight: bold;
+}
+
+.profile-button {
+    height: 50%;
+    margin: 20px
 }
 
 ._spacer {
