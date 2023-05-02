@@ -9,7 +9,7 @@
     <script src="../components/progressBar.js"></script>
 </head>
 
-<body class="has-background-light has-text-centered">
+<body class="has-background-light has-text-centered" style="display:none;"">
     <div class="wrapper">
 
         <!-- left-side space for vertical navbar -->
@@ -27,16 +27,70 @@
 
             <!-- middle space for profile -->
             <div id="main-left" class="column m-0 p-0">
+                <div class="">
+                    <!-- <img src="/media/{{entry.image}}" class="rounded-circle account-img" /> -->
+                    <img 
+                        class="rounded-circle account-img profile-pic"
+                        src="../media/client_pics/notARealImage.png" 
+                        onerror="this.onerror=null; this.src='../assets/personIcon.png'"
+                    >
+                    <div class="media-body">
+                        <h2 class="account-heading">
+                            <!-- {{ entry.first_Name }} -->
+                            Name Lastname
+                        </h2>
+                        <p class="text-secondary">
+                            <!-- {{ entry.client_Intake_Date}} -->
+                            Intake Date: 01/01/2023
+                        </p>
+                    </div>
+                </div>
 
-                <img class="profile-pic" src="../assets/personIcon.png">
+                <div class="content-section form-button-container">
+                    <!-- {% for entry in client_entry %} -->
+        
+                    <!-- {% buttons %} -->
+                    <a href="{% url 'addform' slug=entry.slug %}">
+                        <button class="form-button">
+                            <!-- {% bootstrap_icon "plus" %}  -->
+                            ADD FORM
+                        </button>
+                    </a>
+                    <!-- {% endbuttons %}
+        
+                    {% buttons %} -->
+                    <a href="{% url 'deleteform' slug=entry.slug %}">
+                        <button class="form-button">
+                            <!-- {% bootstrap_icon "minus" %}  -->
+                            DELETE FORM
+                        </button>
+                    </a>
+                    <!-- {% endbuttons %} -->
 
-                <p>Name Lastname</p>
-                <p>DOB: MM/DD/YYYY</p>
-                <p>01234576</p>
+                    <a class="" href="{% url 'upload_document' slug=entry.slug %}">
+                        <button class="form-button">
+                            UPLOAD DOCUMENT
+                        </button>
+                    </a>
+        
+                    <form method="POST">
+                        <!-- {% csrf_token %}
+                        {{ form }} -->
+                    </form>
+                    
+                </div>
 
                 <div class="bars">
                     <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
                         <div class="hero-body">
+                            <div class="media">
+                                <a class="nav-item nav-link"href="{% url 'application_home' slug1=entry.slug slug2=app.slug%}">
+                                    <!-- {{app.application_Name}} -->
+                                    application_Name
+                                </a>
+                                <!-- {% endfor %}
+                                {% endfor %} -->
+                            </div>
                             <progress-bar 
                                 donePct="50" 
                                 inProgressPct="25" >
@@ -46,6 +100,14 @@
 
                     <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
                         <div class="hero-body">
+                            <div class="media">
+                                <a class="nav-item nav-link"href="{% url 'application_home' slug1=entry.slug slug2=app.slug%}">
+                                    <!-- {{app.application_Name}} -->
+                                    application_Name
+                                </a>
+                                <!-- {% endfor %}
+                                {% endfor %} -->
+                            </div>
                             <progress-bar 
                                 donePct="20" 
                                 inProgressPct="25" >
@@ -55,9 +117,34 @@
                     
                     <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
                         <div class="hero-body">
+                            <div class="media">
+                                <a class="nav-item nav-link"href="{% url 'application_home' slug1=entry.slug slug2=app.slug%}">
+                                    <!-- {{app.application_Name}} -->
+                                    application_Name
+                                </a>
+                                <!-- {% endfor %}
+                                {% endfor %} -->
+                            </div>
                             <progress-bar 
                                 donePct="65" 
                                 inProgressPct="25" >
+                            </progress-bar>
+                        </div>
+                    </div>
+
+                    <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
+                        <div class="hero-body">
+                            <div class="media">
+                                <a class="nav-item nav-link"href="{% url 'application_home' slug1=entry.slug slug2=app.slug%}">
+                                    <!-- {{app.application_Name}} -->
+                                    application_Name
+                                </a>
+                                <!-- {% endfor %}
+                                {% endfor %} -->
+                            </div>
+                            <progress-bar 
+                                donePct="0" 
+                                inProgressPct="10" >
                             </progress-bar>
                         </div>
                     </div>
@@ -65,19 +152,12 @@
 
             </div>
 
-            <!-- right-side space for detailed form progress, can be hidden -->
+            <!-- right-side space for detailed form progress; can be hidden -->
             <div id="main-right" class="column">
-                <h1>Form Progress</h1>
+                <a href="./application_home.html">Go to 2010e Application</a>
             </div>
         </div>
-
-        
-
-
-
     </div>
-
-
 
     <script>
         // first, wait until the DOM has fully loaded
@@ -94,5 +174,13 @@
             hideRightPanel();
         }
     </script>
+
+    <script>
+        // add slight delay to reduce flickering
+        $(document).ready(function () {
+        $("body").removeClass("none").hide().fadeIn(75);
+        });
+    </script>
+
 
 </body>

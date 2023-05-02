@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="../components/progressBar.js"></script>
+</head>
+
+<body class="has-background-light has-text-centered">
+    <div class="wrapper">
+
+        <!-- left-side space for vertical navbar -->
+        <div>
+            <div id="nav-placeholder">
+            </div>
+            <script>
+                $(function(){
+                $("#nav-placeholder").load("../components/sidebar.html");
+                });
+            </script>
+        </div>
+
+        <div class="columns main-wrapper m-0 p-0">
+
+            <!-- middle space for profile -->
+            <div id="main-left" class="column m-0 p-0">
+
+                <img class="profile-pic" src="../assets/personIcon.png">
+
+                <p>Name Lastname</p>
+                <p>DOB: MM/DD/YYYY</p>
+                <p>01234576</p>
+
+                <div class="bars">
+                    <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
+                        <div class="hero-body">
+                            <progress-bar 
+                                donePct="50" 
+                                inProgressPct="25" >
+                            </progress-bar>
+                        </div>
+                    </div>
+
+                    <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
+                        <div class="hero-body">
+                            <progress-bar 
+                                donePct="20" 
+                                inProgressPct="25" >
+                            </progress-bar>
+                        </div>
+                    </div>
+                    
+                    <div class="hero progress-bar-container" onclick="toggleRightPanel(this)">
+                        <div class="hero-body">
+                            <progress-bar 
+                                donePct="65" 
+                                inProgressPct="25" >
+                            </progress-bar>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- right-side space for detailed form progress, can be hidden -->
+            <div id="main-right" class="column">
+                <h1>Form Progress</h1>
+            </div>
+        </div>
+
+        
+
+
+
+    </div>
+
+
+
+    <script>
+        // first, wait until the DOM has fully loaded
+        if(document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', afterLoaded);
+        } else {
+            // run startup code after DOMContentLoaded event has already fired
+            afterLoaded();
+        }
+
+        // code to be run after DOM is loaded
+        function afterLoaded() {
+            // explicitly set right panel display to "none" (otherwise it will be null)
+            hideRightPanel();
+        }
+    </script>
+
+</body>
