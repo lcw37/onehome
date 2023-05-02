@@ -1,6 +1,6 @@
 /* @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"; */
-@import "/_references/bootstrap.min.css";
-@import "/_references/bulma.min.css";
+@import "/references/bootstrap.min.css";
+@import "/references/bulma.min.css";
 
 
 /* ===================== GENERAL ===================== */
