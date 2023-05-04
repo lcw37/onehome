@@ -16,6 +16,10 @@ html, body {
     background-color: var(--tan);
 }
 
+* {
+    transition: 0.2s;
+}
+
 /* enable new font family */
 @font-face {
     font-family: "Agrandir";
@@ -66,6 +70,27 @@ html, body {
     position: fixed;
 }
 
+.my-navbar-item {
+    font-weight: bold;
+    color: var(--blue) !important;
+}
+
+.navbar-link {
+    height: 50%;
+    margin-top: 25%;
+}
+
+.navbar-icon {
+    width: 45px;
+    height: 45px;
+    margin: 12px 8px;
+    border-radius: 50%;
+}
+
+.navbar-end img {
+    /* max-width: 100%; */
+    max-height: 100%;
+}
 
 /* sidebar styling */
 .sidebar {
@@ -82,6 +107,7 @@ html, body {
         width: 60px;
         height: auto;
         margin: 14px auto;
+        border-radius: 50%;
     }
 
 .icon:hover {
@@ -145,6 +171,20 @@ html, body {
     border-color:transparent;color:#fff
 }
 
+/* Index styling */
+.array-row {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.image {
+    border-radius: 50%;
+}
+
+.image:hover {
+    box-shadow: 0 0 20px var(--blue);
+    transition: 0.2s;
+}
 
 /* individual profile page styling */
 .main-wrapper {
@@ -212,5 +252,5 @@ html, body {
 /* Other */
 
 ._spacer {
-    height: 100px;
+    height: 70px;
 }
