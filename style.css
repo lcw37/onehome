@@ -17,7 +17,7 @@ html, body {
 }
 
 * {
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 /* enable new font family */
@@ -177,13 +177,15 @@ html, body {
     padding-bottom: 0;
 }
 
-.image {
+.image img {
     border-radius: 50%;
+    opacity: 70%;
 }
 
-.image:hover {
+.image img:hover {
     box-shadow: 0 0 20px var(--blue);
     transition: 0.2s;
+    opacity: 100%;
 }
 
 /* individual profile page styling */
