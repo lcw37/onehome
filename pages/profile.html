@@ -31,11 +31,11 @@
                     <!-- <img src="/media/{{entry.image}}" class="rounded-circle account-img" /> -->
                     <img 
                         class="rounded-circle account-img profile-pic"
-                        src="../media/fake_headshots/charlotte_b.png" 
+                        src="../assets/personIcon.png" 
                         onerror="this.onerror=null; this.src='../assets/personIcon.png'"
                     >
                     <div class="media-body">
-                        <h2 class="account-heading">
+                        <h2 class="account-heading" style="font-weight: bold";>
                             <!-- {{ entry.first_Name }} -->
                             Charlotte B.
                         </h2>
@@ -92,8 +92,8 @@
                                 {% endfor %} -->
                             </div>
                             <progress-bar 
-                                donePct="50" 
-                                inProgressPct="25" >
+                                donePct="10" 
+                                inProgressPct="10" >
                             </progress-bar>
                         </div>
                     </div>
@@ -154,7 +154,14 @@
 
             <!-- right-side space for detailed form progress; can be hidden -->
             <div id="main-right" class="column">
-                <a href="./application_home.html">Go to 2010e Supportive Housing Application</a>
+                <div class="checklist-wrapper">
+                    <img id="checklist-placeholder" src="../assets/progress_checklist.png">
+                    <a href="./application_home.html">
+                        <button class="form-button">
+                            GO TO FORM
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
