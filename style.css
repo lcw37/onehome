@@ -235,7 +235,7 @@ html, body {
 
 #checklist-placeholder {
     height: 43% !important;
-    width: auto;
+    /* width: auto; */
     margin-bottom: 40px;
 }
 
