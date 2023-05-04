@@ -18,6 +18,7 @@ html, body {
 
 * {
     transition: 0.1s;
+    text-decoration: none !important;
 }
 
 /* enable new font family */
